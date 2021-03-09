@@ -1,0 +1,3 @@
+.. |powermail_slowexport_icon|      image:: Images/ext_icon.svg
+.. :align: left
+.. :name: powermail_slowexport_icon
