@@ -36,7 +36,7 @@ class ModuleController extends \In2code\Powermail\Controller\ModuleController
 	/**
 	 * @return string
 	 */
-	public function exportCsvAction()
+	public function exportCsvAction(): void
 	{
 		if (PMSE_DEBUG)
 			$starttime =  time();
@@ -61,7 +61,5 @@ class ModuleController extends \In2code\Powermail\Controller\ModuleController
 			$time =  time() - $starttime;
 			$this->addFlashMessage('CSV export time: ' . $time . 's, peak: ' . (int)(memory_get_peak_usage()/(1024*1024)) . 'MB', 'DEBUG', AbstractMessage::INFO);
 		}
-
-		return '';
 	}
 }
