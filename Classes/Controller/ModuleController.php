@@ -61,5 +61,6 @@ class ModuleController extends \In2code\Powermail\Controller\ModuleController
 			$time =  time() - $starttime;
 			$this->addFlashMessage('CSV export time: ' . $time . 's, peak: ' . (int)(memory_get_peak_usage()/(1024*1024)) . 'MB', 'DEBUG', AbstractMessage::INFO);
 		}
+		exit();//TYPO3 v10 adds a BOM "0xff 0xfe"
 	}
 }
